@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Home page for our online pokedex tool">
+        <meta name="keywords" content="home, pokemon, API">
+        <meta name="author" content="Ben Greenberg">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">   
+        <!-- Use JSDelivr for cached version of bootstrap -->
+    </head>
+    <body class="bg-warning">
+        <header>
+            <div class="container-fluid" id="home">    
+                <nav class="navbar navbar-expand-sm navbar-white bg-primary fixed-top">
+                    <button 
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    class="navbar-toggler"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                    >Sections</button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active"><a href=home.html class="nav-link text-white">Home</a></li>
+                            <li class="nav-item active"><a href=pokemon_search.html class="nav-link text-white">Pokemon Search</a></li>
+                            <li class="nav-item active"><a href=squirtle_details.html class="nav-link text-white">Squirtle Details</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!-- Responsive Nav bar inside it's own container in the header -->
+        </header>
+        <main>
+            <div class="container-fluid">
+                <h1 class="text-center mt-5 py-5 col-12 text-primary">Pokedex API</h1>
+            </div>
+            <div class="container-fluid my-4">
+                <div class="col-12">
+                    <div class="card">
+                        <img src="pokemon_card_back.jpg" class="card-img-top" alt="back of pokemon Cards">
+                        <div class="card-body">
+                          <h5 class="card-title text-center text-danger">Gotta Search 'Em All</h5>
+                          <p class="card-text text-warning">Head over to the <a class="text-warning" href=pokemon_search.html>Pokemon Search</a> page to learn more about any pokemon from the PokeAPI.</p>
+                          <!-- Bootstrap formatted card to inform the user of our sites' purpose and direct them to the proper starting point -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <!-- Bootstrap script via JSdelivr -->
+    </body>
+</html>
