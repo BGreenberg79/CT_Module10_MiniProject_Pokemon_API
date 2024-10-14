@@ -36,7 +36,9 @@ const feedToHTML = (error, pokemonData) => {
         dataInfoId.innerHTML = `<p>Error Fetching Pokemon Data: ${error.message}</p>`;
     } 
     else {
-        dataInfoId.innerHTML = `<p class="fw-bold fs-2 ml-3 px-2">Name: ${pokemonData.name}</p>
+        dataInfoId.innerHTML = `
+        <img class="img-thumbnail rounded" src=${pokemonData.sprites.front_default} alt="pokemon image">
+        <p class="fw-bold fs-2 ml-3 px-2">Name: ${pokemonData.name}</p>
         <p class="fw-bold fs-2 ml-3 px-2">Pokedex Number: ${pokemonData.id}</p>
         <p class="fw-bold fs-2 ml-3 px-2">Pokemon Type: ${pokemonData.types[0].type.name}</p>
         `;

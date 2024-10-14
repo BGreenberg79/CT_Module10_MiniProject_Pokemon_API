@@ -25,12 +25,15 @@ async function fetchPokemon(callback){
 
 const feedToHTML = (error, pokemonData) => {
     const dataInfoId = document.getElementById('results-container');
+    const imgId= document.getElementById('img-container');
     console.log(pokemonData)
     if (error) {
         dataInfoId.innerHTML = `<p>Error Fetching Pokemon Data: ${error.message}</p>`;
     } 
     else {
-        dataInfoId.innerHTML = `<p class="fw-bold fs-2 ml-3 px-2 text-warning-emphasis">Name: ${pokemonData.name}</p>
+        imgId.innerHTML = `<img class="img-thumbnail rounded" src=${pokemonData.sprites.front_default} alt=""Squirtle Image>`
+        dataInfoId.innerHTML = `
+        <p class="fw-bold fs-2 ml-3 px-2 text-warning-emphasis">Name: ${pokemonData.name}</p>
         <p class="fw-bold fs-2 ml-3 px-2 text-warning-emphasis">Pokedex Number: ${pokemonData.id}</p>
         <p class="fw-bold fs-2 ml-3 px-2 text-warning-emphasis">Pokemon Type: ${pokemonData.types[0].type.name}</p>
         <p class="fw-bold fs-2 ml-3 px-2 text-warning-emphasis">Pokemon Abilities: ${pokemonData.abilities[0].ability.name}, ${pokemonData.abilities[1].ability.name}</p>
